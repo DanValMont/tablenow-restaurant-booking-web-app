@@ -39,6 +39,6 @@ for manipulating JavaScript dates in a browser & Node.js.
 
 ## Demo Website
 
-[TABLENOW - RENDER](...)
+[TABLENOW - RENDER](https://tablenow-hihz.onrender.com)
 
-[TABLENOW - VERCEL](...)
+[TABLENOW - VERCEL](https://tablenow-nine.vercel.app/)
