@@ -27,7 +27,7 @@ interface SearchParams {
 
 const prisma = new PrismaClient();
 
-const findRestaurantsByCity = (
+const findRestaurantsByCity = async (
   searchParms: SearchParams
 ): Promise<RestaurantCardTypeByCity[]> => {
   const where: any = {};
@@ -70,7 +70,7 @@ const findRestaurantsByCity = (
     cuisine: true,
   };
 
-  return prisma.restaurant.findMany({
+  return await prisma.restaurant.findMany({
     where,
     select,
   });
