@@ -1,38 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TABLENOW
 
-## Getting Started
+Tablenow is a real-time online reservation network web app for fine restaurants from different cities in Canada (Montreal, Ottawa and Niagara Region).
+It allows you to make online reservations and also read restaurant reviews from diners.
 
-First, run the development server:
+## Features and Advantages
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* The web application implements a reservation and availability system based on the opening hours of each restaurant, on the one hand, and on the other, it takes into account, based on the number of the party size, the number of tables in each restaurant, as well as the number of seats at each table.
+* The project has a search bar on the homepage that displays a list of restaurants based on city, town or region searched. In each list of restaurant results the user has the option to even filter them based on price (cheap, regular, expensive), cuisine (french, peruvian, mexican, italian, etc.) and region.
+* The project has sign in and sign up components to manage users.
+* Each restaurant card component has a link page that displays more information about it (description, photos, reviews, menu and reservation options).
+* Any visitor to our web application can make a reservation to a specific restaurant, but only users who have made a reservation to this restaurant and are registered will be able to leave a review on it.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Advantages
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+* Thanks to the reliability, scalability, stability, and security provided by a PostgreSQL database, the project can be easily upscaled to include other cities from different regions across different countries.
+* After the successful payment, the admin user is going to receive the money immediately in his/her account.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Technologies applied to this project
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* **TypeScript** a strongly typed programming language that builds on JavaScript, which help us write more reliable and maintainable code by catching errors and bugs at compile time, rather than at runtime.
+* **Next.js** a powerful full-stack React framework.
+* **Tailwind CSS** a utility-first CSS framework for rapid UI development of modern websites and applications.
+* **Material UI** to design a web application based on the best practices in UI and UX.
+* **React Context** to manage the state of the application in a predictable way.
+* **PostgreSQL** an advanced, enterprise class open source relational database that supports both SQL (relational) and JSON (non-relational) querying.
+* **Supabase**  an excellent open-source tool for building secure and high-performance Postgres backends (authentication, real-time database, and storage) with minimal configuration.
+* **Prisma.io** an open-source ORM (Object Relational Mapping), server-side library for Node.js and TypeScript that helps developers create data models (schemas)  and also read and write data to the database in an intuitive, efficient and safe way.
+* **Bcrypt** to build a password security platform that uses an algorithm to hash passwords with a salt.
+* **JSON Web Tokens (JWT)** to authenticate users.
+* **Jose** a javascript module that supports JSON Web Tokens (JWT) and provides functionality for signing and verifying tokens, as well as their JWT Claims Set validation.
+* **Cookies-next** a library for getting, setting and removing cookies with NEXT.JS.
+* **Validator** a library of string validators and sanitizers.
+* **React-Datepicker**  a simple and reusable datepicker component for React.
+* **Date-fns** provides the most comprehensive, yet simple and consistent toolset
+for manipulating JavaScript dates in a browser & Node.js.
 
-## Learn More
+## Demo Website
 
-To learn more about Next.js, take a look at the following resources:
+[TABLENOW - RENDER](...)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[TABLENOW - VERCEL](...)
