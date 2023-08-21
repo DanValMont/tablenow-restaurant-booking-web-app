@@ -108,7 +108,6 @@ export default async function Search({
           searchParams={searchParams}
         />
         <div className="md:w-5/6 w-full">
-          <p>{`this is the searchParams: ${searchParams.city}`}</p>
           {restaurants.length ? (
             restaurants.map((restaurant) => (
               <RestaurantCard key={restaurant.id} restaurant={restaurant} />
