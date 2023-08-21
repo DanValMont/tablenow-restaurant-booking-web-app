@@ -1,11 +1,24 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useCallback, useState } from "react";
 
 export default function SearchBar() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [location, setLocation] = useState("");
+
+
+  const createQueryString = useCallback(
+    (name: string, value: string) => {
+      const params = new URLSearchParams(searchParams)
+      params.set(name, value)
+ 
+      return params.toString()
+    },
+    [searchParams]
+  )
+
 
   return (
     <div className="text-left text-lg py-3 m-auto flex md:flex-row flex-col justify-center">
@@ -20,7 +33,8 @@ export default function SearchBar() {
         className="rounded bg-red-600 px-9 py-2 text-white"
         onClick={() => {
           if (location === "") return;
-          router.push(`/search?city=${location}`);
+          // router.push(`/search?city=${location}`);
+          router.push("/search" + "?" + createQueryString("city", location));
           setLocation("");
         }}
       >
