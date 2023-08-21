@@ -8,6 +8,8 @@ export const metadata = {
   description: "Search results",
 };
 
+export const dynamic = 'force-dynamic'
+
 export interface RestaurantCardTypeByCity {
   id: number;
   name: string;
@@ -91,6 +93,7 @@ export default async function Search({
 }: {
   searchParams: SearchParams;
 }) {
+  
   const restaurants = await findRestaurantsByCity(searchParams);
   const location = await fetchLocations();
   const cuisine = await fetchCuisine();
@@ -105,6 +108,7 @@ export default async function Search({
           searchParams={searchParams}
         />
         <div className="md:w-5/6 w-full">
+          <p>{`this is the searchParams: ${searchParams.city}`}</p>
           {restaurants.length ? (
             restaurants.map((restaurant) => (
               <RestaurantCard key={restaurant.id} restaurant={restaurant} />
