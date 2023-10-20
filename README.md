@@ -16,7 +16,6 @@ It allows you to make online reservations and also read restaurant reviews from 
 ### Advantages
 
 * Thanks to the reliability, scalability, stability, and security provided by a PostgreSQL database, the project can be easily upscaled to include other cities from different regions across different countries.
-* After the successful payment, the admin user is going to receive the money immediately in his/her account.
 
 ## Technologies applied to this project
 
