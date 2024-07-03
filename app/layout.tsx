@@ -23,9 +23,14 @@ export const metadata = {
       },
     ],
   },
-  themeColor: "#FFFFFF",
+  // themeColor: "#FFFFFF",
   manifest: "site.webmanifest",
 };
+
+export const viewport = {
+  width: 1,
+  themeColor: 'dark',
+}
 
 export default function RootLayout({
   children,
