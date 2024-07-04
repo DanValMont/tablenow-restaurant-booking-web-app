@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import SearchBar from "./SearchBar";
 
 export default function Header() {
@@ -7,7 +8,9 @@ export default function Header() {
         <h1 className="text-white text-3xl md:text-5xl font-bold mb-2">
           Find your table for any occasion
         </h1>
-        <SearchBar />
+          <Suspense>
+            <SearchBar />
+          </Suspense>
       </div>
     </div>
   );
